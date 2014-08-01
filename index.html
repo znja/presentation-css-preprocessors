@@ -1,10 +1,9 @@
 <!doctype html>
 <html lang="en">
-
 	<head>
 		<meta charset="utf-8">
 
-		<title>Github Flow - Understanding the Github Flow</title>
+		<title>CSS Preprocessors- The future of CSS</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -13,9 +12,10 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+	
 		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/theme/default-znja.css" id="theme">
+
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -42,11 +42,14 @@
 			<!-- Slide 1 -->
 			<div class="slides">
 				<section>
-					<h1>GitHub Flow</h1>
-					<h3>Understanding the "GitHub Flow" to Git</h3>
+					<h1>CSS Preprocessors</h1>
+					<h3>LESS CSS is more SASSy.</h3>
 					<p>
 						<small>Created by <a href="http://github.com/znja" target="_blank">Carlos Corvaia</a> from Egov </small>
 					</p>
+					<div class="logos">
+						<img src="imgs/less-logo.png" > <img src="imgs/sass-logo.png" >
+					</div>
 				</section>
 			</div>
 			<!-- END OF SLIDE 1 -->
@@ -56,219 +59,236 @@
 				<section>
 					<!-- Sub Slide 1 -->
 					<section>
-						<h1>WHAT IS GIT AND</h1>
-						<h1> WHAT IS GITHUB?</h1>
+						<h2>I will talk about</h2>
+						<ul>
+							<li>CSS Weaknesses</li>
+							<li>Preprocessors features</li>
+						</ul>
 					</section>
 					
 					<!-- Sub Slide 2 -->
 					<section>
-						<h2>What is git?</h2>
-						<ul>
-							<li>A distributed revision control system</li>
-							<li>Source code management system</li>
-							<LI>Just like SVN or Mercurial</LI>
-						</ul>
+						<h2>Ready to feel like this?</h2>
+						<img class="fragment" src="http://i.imgur.com/mJMj0.gif">
 					</section>
-					<!-- Sub Slide 3 -->
-					<section>
-						<h2>What is GitHub?</h2>
-						<ul>
-							<li>A web-based hosting service which offers all of the functionality of Git. (The <strong>“Git”</strong> in GitHub)</li>
-							<li>A way to share and colaborate code with friends, co-workers, and just random awesome people. (The <strong>"Hub"</strong> in GitHub)</li>
-						</ul>
-					</section>
+
 				</section>
 			</div>
 			<!-- END OF SLIDE 2 -->
 
-			<!-- SLIDE 3 -->
+			<!-- SLIDE 3 -->			
 			<div class="slides">
 				<section>
-
 					<!-- Sub Slide 1 -->
 					<section>
-						<h2>What is a GitHub flow?</h2>
-						<p> A lightweight, branch-based workflow that supports teams and projects where deployments are made regularly. </p>
-						<p> Its simplicity gives it a number of advantages. But its main advantage is it's easy for people to understand, which means they can pick it up quickly and they rarely if ever mess it up </p>
+						<h1>CSS Weaknesses</h1>
 					</section>
-
+					
 					<!-- Sub Slide 2 -->
 					<section>
-						<p>I bet you are like </p>
-						<img src="imgs/gifs/I%20dont%20believe%20you.GIF">
+						<h2>Lack of variables</h2>
+						<p> CSS Variables. yeah they exist in new web kits, but we wont be able to see them until IE 7,8,9,10 usage drop below 1%. We know when that is going to happen right?</p>
+					</section>
+
+					<!-- Sub Slide 3 -->
+					<section>
+						<h2>Working with multiple files</h2>
+						<p class="fragment"> Having multiple files is good for collaboration and maintainability and this can be done in CSS with the <code>@import</code> but with a high cost.</p>
+						<p class="fragment"> Additional HTTP request (NO one wants more of those)</p>
+					</section>
+
+					<!-- Sub Slide 4 -->
+					<section>
+						<h2>HUGE messy CSS files</h2>
+						<p>Hard to maintain, even for awesome CSS hackysakers ninja masters that comment block their CSS.</p>
+						<p>Not DRY enough.</p>
+						<p class="fragment">D = DON'T</p>
+						<p class="fragment">R = REPEAT</p>
+						<p class="fragment">Y = YOURSELF</p>
+						<p class="fragment">Before you wreck yourself</p>
+					</section>
+					<!-- Sub Slide 5 -->
+					<section>
+						<h2>Preprocessors are here to help</h2>
+						<p class="fragment">How?</p>
+						<img class="fragment" src="imgs/gifs/magic.gif">
+					</section>
+
+					<!-- Sub Slide 5 -->
+					<section>
+						<h2>Disclamer!</h2>
+						<p>Before you go Super Saiyan on me</p>
+						<img src="imgs/gifs/ss2.gif">
+						<p>Preprocessors do NOT enhance CSS, but what they will do is improve your development workflow</p>
 					</section>
 
 				</section>
 			</div>
 			<!-- END OF SLIDE 3 -->
 
-			<!-- SLIDE 4 -->
+			<!-- SLIDE 4 -->			
 			<div class="slides">
 				<section>
-
 					<!-- Sub Slide 1 -->
 					<section>
-						<h2>Awesomeness Starts Now</h2>
-						<p> Lets assume the following:</p>
-						<ol>
-							<li class="fragment">You have an existing working project currently Version Controlled using GIT</li>
-							<li class="fragment">Master Branch is your stable branch (I'll explain why)</li>
-						</ol>
+						<h1>Preprocessors features</h2>
 					</section>
-
+					
 					<!-- Sub Slide 2 -->
 					<section>
-						<h2> There is only one rule to fight club:</h2>
-						<blockquote>We Don't talk about Fight Club</blockquote>
+						<ol>
+							<li>Variables</li>
+							<li>Operations and Color Functions</li>
+						</ol>
 					</section>
-
 					<!-- Sub Slide 3 -->
 					<section>
-						<h2> There is only one rule to "GitHub flow":</h2>
-						<blockquote> Anything in the <code>Master</code> branch is <strong>ALWAYS</strong> deployable</blockquote>
+						<p>These features work on both SASS and LESS</p>
 					</section>
-
 				</section>
 			</div>
 			<!-- END OF SLIDE 4 -->
 
-			<!-- SLIDE 5 -->
+			<!-- SLIDE 5 -->			
 			<div class="slides">
 				<section>
-
 					<!-- Sub Slide 1 -->
 					<section>
-						<h2>Create a branch</h2>
-						<img src="imgs/step1.png">
-					</section>
+						<h2>Variables</h2>
+						<pre><code data-trim contenteditable>
+$my_awesome_blue: #001F3F; //SASS
+@my_awesome_blue: #001F3F; //LESS
 
+$primary_color: $my_awesome_blue;
+
+h1 {
+	color: $primary_color;
+}
+						</code></pre>
+					</section>
+					
 					<!-- Sub Slide 2 -->
 					<section>
-						<h2>Why?</h2>
-						<p class="fragment" >When you create a branch in your project, you're creating an environment where you can try out new ideas.</p>
-						<p class="fragment">Changes you make on a branch don't affect the master branch, so you're free to experiment and commit changes, safe in the knowledge that your branch won't be merged until it's ready to be reviewed by someone you're collaborating with.</p>
+						<h2>Variable Types</h2>
+						<p>Variable don't have be just colors</p>
+						<pre><code data-trim contenteditable>
+$fonts: Helvetica, Arial, sans-serif;
+$images_path: "../img/";
+$font-size: 1.5em;
+$margin: 20px;
+$width: 1000px;
+						</code></pre>
 					</section>
-
 				</section>
 			</div>
 			<!-- END OF SLIDE 5 -->
 
-			<!-- SLIDE 6 -->
+			<!-- SLIDE 6 -->			
 			<div class="slides">
 				<section>
-
-					<!-- Sub Slide 1-->
+					<!-- Sub Slide 1 -->
 					<section>
-						<h2>Add Commits</h2>
-						<img src="imgs/step2.png">
-					</section>
+						<h2>Operations and color functions</h2>
+						<h4>Math and colors operations</h4>
+						<pre><code data-trim contenteditable>
+width: $width / 2 ; // = 500px
+						</code></pre>
+						<h4>Color Functions</h4>
+						<pre><code data-trim contenteditable>
+$light_blue: lighten($my_awesome_blue, 20%);
+$invert_blue: invert($my_awesome_blue, 20%);
 
-					<!-- Sub Slide 2 -->
-					<section>
-						<h2>It's time to start making changes.</h2>
-						<p class="fragment">This will be commits. Commits create a transparent history (A story of your progress) that will help other collaboratores understand what you've done and why</p>
-						<p class="fragment"> <strong>Commit messages are important!!</strong> </p>
-						<p class="fragment">Commits will also help you track your progress and rollback if you if you find a bug or you decide to take the implementation in a different direction</p>
+						</code></pre>
 					</section>
 				</section>
 			</div>
 			<!-- END OF SLIDE 6 -->
 
-			<!-- SLIDE 7 -->
+			<!-- SLIDE 7 -->			
 			<div class="slides">
 				<section>
-
 					<!-- Sub Slide 1 -->
 					<section>
-						<h2>Open a Pull Request</h2>
-						<img src="imgs/step3.png">
+						<h2>MIXINS</h2>
+						<p>Mixins don't return anything but output CSS</p>
+						<p>Functions like lighten() return values</p>
+						<pre><code data-trim contenteditable>
+@mixin border-radius($radius: 10px){
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+	        border-radius: $radius;
+}
+.button {
+	...
+	@include border-radius(4px);
+}
+						</code></pre>
+						<p>Will output: </p>
+						<pre><code data-trim contenteditable>
+.button {
+	...
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+	        border-radius: 4px;
+}
+						</code></pre>
 					</section>
-
-					<!-- Sub Slide 2 -->
-					<section>
-						<h2>What is a Pull Request</h2>
-						<p class="fragment"> Pull Requests initiate discussion about your commits</p>
-						<p class="fragment pull-left"> When to do a pull request?</p>
-						<ul>
-							<li class="fragment">At any point during the development process</li>
-							<li class="fragment">When you have little or no code but want to share some screenshots or general ideas </li>
-							<li class="fragment">When you're stuck and need help or advice</li>
-							<li class="fragment">When you're ready for someone to review your work</li>
-						</ul>
-					</section>
-
 				</section>
 			</div>
 			<!-- END OF SLIDE 7 -->
 
-
-			<!-- SLIDE 8 -->
-			<div class="slides">
+			<!-- SLIDE 8 -->			
+			<div class="slides" >
 				<section>
-
 					<!-- Sub Slide 1 -->
 					<section>
-						<h2>Discuss and review your code</h2>
-						<img src="imgs/step4.png">
-					</section>
+						<h2>NESTING</h2>
+							<pre><code data-trim contenteditable>
+.preprocessor {
+  .is-awesome {
+    ...
+    &:hover {
+      ...
+    }
+  }
+}
+// ======= Output ========
 
-					<!-- Sub Slide 2 -->
-					<section>
-						<h2>Code Discussion Time!!</h2>
-						<img src="imgs/gifs/itsHappening.gif" class="fragment">
-					</section>
+.preprocessor {}
+.preprocessor .is-awesome {}
+.preprocessor .is-awesome:hover {}
 
-					<!-- Sub Slide 3 -->
-					<section>
-						<h2>Let the conversation flow</h2>
-						<p class="fragment">Once a pull request has been open, time to get social and help out.</p>
-						<p class="fragment">Our awesome peers will review your changes and may have questions or comments about your "AWESOME CODE"</p>
-						<p class="fragment">Maybe they want to give us some tips on coding style (Do we have those?.. Yes we do refer to wiki) that we neglected</p>
-						<p class="fragment">Perhaps your changes are missing unit tests (TESTING IS IMPORTANT), or maybe everything looks great and props are in order. (high fives all around)</p>
+							</code></pre>
+						<p>Don't over nest (4 level max)</p>
 					</section>
 				</section>
 			</div>
-			<!-- END OF SLIDE 5 -->
+			<!-- END OF SLIDE 8 -->
 
-			<!-- SLIDE 5 -->
-			<div class="slides">
+			<!-- SLIDE 9 -->			
+			<div class="slides container-fluid " >
 				<section>
+					<!-- Sub Slide 1 -->
 					<section>
-						<h2>Merge and deploy</h2>
-						<img src="imgs/step5.png">
+						<h2>Imports and minification</h2>
+						<p>Imports now work with no performance costs!</p>
+						<img src="/imgs/gifs/excited.gif">
+						<p>Exciting right?</p>
 					</section>
 					<section>
-						<h2>Your code is ready to be release to the wild</h2>
-						<img src="imgs/gifs/MergeTime.GIF" class="fragment">
-					</section>
-					<section>
-						<h2>Almost done</h2>
-						<p class="fragment" >Once your Pull Request has been reviewed and the branch passes your tests, it's time to merge your code to the master branch for deployment.</p>
-						<p class="fragment" >You may want to test this merge locally first before meging in the Github repo.</p>
-						<p class="fragment" >Finally, your work is done and merged into the master branch. This means that any new work or deployment will be based off of your merged branch to <code>MASTER</code>, and everyone will be using the latest code</p>
+						<h2>How?</h2>
+						<p>Just import them and let the preprocessor stitch your CSS together</p>
+							<pre><code data-trim contenteditable>
+@import "colors";
+@import "typography";
+@import "layouts";
+							</code></pre>
+						<p>It can also output a clear or minified version of your CSS</p>
 					</section>
 				</section>
 			</div>
-			<!-- END OF SLIDE 5 -->
-
-			<!-- SLIDE 5 -->
-			<div class="slides">
-				<section>
-					<h2>TL;DR (Too Long; Didnt Read)</h2>
-					<h3>So, What is GitHub Flow</h3>
-					<ul>
-						<li class="fragment">Anything in the master branch is deployable</li>
-						<li class="fragment">To work on something new, create a descriptively named branch off of master (ie: new-oauth2-scopes)</li>
-						<li class="fragment">Commit to that branch locally and regularly push your work to the same named branch on the server</li>
-						<li class="fragment">When you need feedback or help, or you think the branch is ready for merging, open a pull request</li>
-						<li class="fragment">After someone else has reviewed and signed off on the feature, you can merge it into master</li>
-						<li class="fragment">Once it is merged and pushed to ‘master’, you can and should deploy immediately</li>
-					</ul>
-					<br>
-					<p class="pull-right"><small>taken from Scott Chacon blog about <a href="http://scottchacon.com/2011/08/31/github-flow.html">GitHub Flow</a></small></p>
-				</section>
-			</div>
-			<!-- END OF SLIDE 5 -->
+			<!-- END OF SLIDE 9 -->
+		
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
