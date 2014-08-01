@@ -62,7 +62,8 @@
 						<h2>I will talk about</h2>
 						<ul>
 							<li>CSS Weaknesses</li>
-							<li>Preprocessors features</li>
+							<li>Preprocessors Features</li>
+							<li>Misconseptions</li>
 						</ul>
 					</section>
 					
@@ -266,13 +267,13 @@ $invert_blue: invert($my_awesome_blue, 20%);
 			<!-- END OF SLIDE 8 -->
 
 			<!-- SLIDE 9 -->			
-			<div class="slides container-fluid " >
+			<div class="slides" >
 				<section>
 					<!-- Sub Slide 1 -->
 					<section>
 						<h2>Imports and minification</h2>
 						<p>Imports now work with no performance costs!</p>
-						<img src="/imgs/gifs/excited.gif">
+						<img src="imgs/gifs/excited.gif">
 						<p>Exciting right?</p>
 					</section>
 					<section>
@@ -284,6 +285,37 @@ $invert_blue: invert($my_awesome_blue, 20%);
 @import "layouts";
 							</code></pre>
 						<p>It can also output a clear or minified version of your CSS</p>
+					</section>
+				</section>
+			</div>
+			<!-- END OF SLIDE 9 -->
+
+			<!-- SLIDE 10 -->			
+			<div class="slides" >
+				<section>
+					<!-- Sub Slide 1 -->
+					<section>
+						<h1>Misconceptions</h1>
+					</section>
+					<section>
+						<h2>"I need ruby or node backend"</h2>
+						<p>SASS is written in Ruby</p>
+						<p>LESS is written in Javascript</p>
+
+						<p>This does NOT mean you need ruby or node on your production server to use them.</p>
+
+						<p>You need them on your development machine</p>
+					</section>
+					<section>
+						<h2>Less Runs client-side</h2>
+						<p>Less can run client-side, But NEVER use it in production.</p>
+						<p>It is OK for quick testing or to complile in-browser if you can't access your dev environment.</p>
+					</section>
+					<section>
+						<h2>It is hard to install</h2>
+						<p>Both Ruby and Node are easy to install on any platform</p>
+						<p>Mac: Ruby is pre-installed, Node.pkg</p>
+						<p>Windows: RubyInstaller.exe, Node.exe</p>
 					</section>
 				</section>
 			</div>
